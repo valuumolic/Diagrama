@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama Interactivo - Lista de Tareas</title>
+    <script type="module">
+        import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <h2>Diagrama de la Lista de Tareas</h2>
+    <div class="mermaid">
+        graph TD;
+        A[Usuario] -->|Crea| B[Tareas]
+        B -->|Pertenece a| C[Categorías]
+        B -->|Otorga| D[Monedas]
+        D -->|Se usan en| E[Tienda]
+        D -->|Se canjean por| F[Recompensas]
+        A -->|Personaliza| G[Personaje]
+        G -->|Sube de nivel con| D
+        A -->|Consulta| H[Estadísticas]
+        A -->|Recibe sugerencias de| I[IA Planificadora]
+        I -->|Genera| J[Plan de Tareas]
+        J -->|Se almacena en| K[Base de Datos]
+        B -->|Se almacena en| K
+        D -->|Se almacena en| K
+        F -->|Se almacena en| K
+
+        click B "javasscript:alert('Tarea: Contiene título, descripción, fecha de vencimiento, estado (Pendiente, En progreso, Completada) y categoría. También puede tener una duración estimada.')" "Detalles de Tarea"
+        click C "javascript:alert('Categorías: Permiten organizar las tareas en diferentes grupos como Trabajo, Estudio, Ejercicio, etc.')" "Detalles de Categorías"
+        click D "javascript:alert('Monedas: Se obtienen al completar tareas y se pueden usar para subir de nivel, comprar accesorios o canjear recompensas personales.')" "Detalles de Monedas"
+        click E "javascript:alert('Tienda: Espacio donde el usuario puede comprar ropa, accesorios y personalizaciones para su personaje con las monedas ganadas.')" "Detalles de Tienda"
+        click F "javascript:alert('Recompensas: Premios personalizados configurados por el usuario, como salidas, snacks o tiempo libre, canjeables con monedas.')" "Detalles de Recompensas"
+        click G "javascript:alert('Personaje: Un avatar personalizado que sube de nivel a medida que el usuario completa tareas y gana monedas. Se puede personalizar con elementos de la tienda.')" "Detalles de Personaje"
+        click H "javascript:alert('Estadísticas: Permiten ver el progreso, rachas de tareas completadas, eficiencia semanal y otros datos para mejorar la productividad.')" "Detalles de Estadísticas"
+        click I "javascript:alert('IA Planificadora: Chatbot que sugiere tareas, organiza la agenda semanal y da consejos de productividad basados en hábitos del usuario.')" "Detalles de IA Planificadora"
+        click J "javascript:alert('Plan de Tareas: Generado automáticamente por la IA con base en las indicaciones y prioridades del usuario.')" "Detalles de Plan de Tareas"
+        click K "javascript:alert('Base de Datos: Almacena toda la información de tareas, monedas, recompensas, estadísticas y progreso del usuario.')" "Detalles de Base de Datos"
+    </div>
+</body>
+</html>
